@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bien Reviews - the best restaurants in the world</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+
+      <%=link_to root_path do %>
+        <%= image_tag "bien-logo.svg" %>
+      <% end %>
+
+      <h2>The best restaurant reviews in the world</h2>
+      
+      <nav>
+        <%=link_to "Add a review", new_review_path%>
+      </nav>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <p>Copyright 2022 Bien Reviews</p>
+    </footer>
+  </body>
+</html>
